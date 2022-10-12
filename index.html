@@ -38,31 +38,33 @@
     <nav>
       <header class="bg-nav" data-type="navBar">
         <div
-          class="nav-flex flex shrink-1 text-invert px-2 md:px-20 gap-6 py-2 justify-between"
+          class="nav-flex flex shrink-1 text-invert px-2 lg:px-20 gap-6 py-2 justify-between"
         >
           <div class="nav-left flex gap-2 items-center basis-[20%]">
             <a class="btn-menu" href="#">
-              <i class="nav-icon fa fa-ellipsis-h hidden md:block"></i>
-              <i class="nav-icon fa fa-bars block md:hidden"></i>
-              <span class="uppercase font-medium hidden md:block">Menu</span>
+              <i class="nav-icon fa fa-ellipsis-h hidden lg:block"></i>
+              <i class="nav-icon fa fa-bars block lg:hidden"></i>
+              <span class="uppercase font-medium hidden lg:block">Menu</span>
             </a>
             <div class="btn-search">
               <a href="#" class="flex gap-3 items-center">
                 <i class="nav-icon fa-solid fa-magnifying-glass"></i>
-                <span class="uppercase text-xs font-medium hidden md:block"
+                <span class="uppercase text-xs font-medium hidden lg:block"
                   >Search</span
                 >
               </a>
             </div>
           </div>
-          <div class="nav-middle basis-[60%]">
+          <div class="nav-middle flex flex-col basis-[60%] items-center">
             <div class="nav-logo">
               <img src="https://unsplash.it/130/50" alt="Brand Logo" />
             </div>
             <ul
-              class="nav-list flex gap-6 justify-center pt-3 pb-5 uppercase font-medium text-sm hidden md:flex"
+              class="nav-list flex flex-wrap gap-6 justify-center pt-3 pb-5 uppercase font-medium text-sm hidden lg:flex"
             >
-              <li><a href="#" class="btn-nav-shop">Shop Now</a></li>
+              <li class="shrink-0">
+                <a href="#" class="btn-nav-shop">Shop Now</a>
+              </li>
               <li><a href="#">Acne Skincare</a></li>
               <li><a href="#">Anti-Aging Skincare</a></li>
               <li><a href="#">Bundles & Kits</a></li>
@@ -73,7 +75,7 @@
           <div class="nav-right flex gap-2 items-center basis-[20%]">
             <a
               href="#"
-              class="uppercase p-2 text-xs font-medium hidden md:block"
+              class="uppercase p-2 text-xs font-medium hidden lg:block"
               >Get $25 off</a
             >
             <div class="flex">
@@ -95,28 +97,309 @@
       </header>
     </nav>
     <main>
-      <section id="MainContent"></section>
+      <section id="MainContent" class="h-[80vh] bg-gray-300"></section>
       <section id="How">
-        <header></header>
+        <div class="relative">
+          <div class="page-wrapper">
+            <header>How to Use the Clear Skin Kit</header>
+            <div class="wistia-embed">
+              <iframe
+                width="100%"
+                height="700px"
+                src="https://www.youtube.com/embed/jDJJ1vsfNEU"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="flex flex-col lg:flex-row mt-20 gap-3">
+              <div class="how-text__column flex flex-col basis-[40%]">
+                <p
+                  class="how-text__pitch text-[42px] leading-[50px] font-serif font-thin px-2 lg:px-0"
+                >
+                  Helps to fight breakouts, blackheads, & blemishes, even if
+                  nothing else has worked before
+                </p>
+                <div class="underline-sm"></div>
+              </div>
+              <div class="how-image relative basis-[60%]">
+                <img src="https://picsum.photos/750/444" alt="" class="" />
+              </div>
+            </div>
+          </div>
+          <div class="bg-block absolute bottom-[150px]"></div>
+        </div>
       </section>
-      <section id="Collection">
-        <header></header>
+      <section id="Collection" class="hidden">
+        <header>Our Customer Recommendations...</header>
       </section>
-      <section id="Q&A"></section>
-      <section id="Benefits"></section>
+      <section id="Q&A">
+        <div class="bg-grey">
+          <div class="page-wrapper py-12 my-6">
+            <ul
+              class="qa__header flex justify-center items-center font-bold text-xl pb-6"
+            >
+              <li class="p-2">
+                <a href="" class="qa__header-item active" onclick="" data-qa="1"
+                  >What it is?</a
+                >
+              </li>
+              <li class="p-2">
+                <a href="" class="qa__header-item" onclick="" data-qa="2"
+                  >What to expect?</a
+                >
+              </li>
+              <li class="p-2">
+                <a href="" class="qa__header-item" onclick="" data-qa="3"
+                  >Ingredients</a
+                >
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="qa__content-item hidden show active" data-qa="1">
+                Born from the frustration of skincare products that just won't
+                work and breakouts that just won't fight, this system contains
+                four powerhouse products that use gentle aggression to fight
+                your current breakouts and prevent new ones from forming. Filled
+                with over 40 all-natural ingredients, each product is carefully
+                designed to help kill harmful bacteria while replenishing the
+                skin with essential nutrients. This kit addresses each aspect of
+                skin health from cleansing and hydration to detoxifying and
+                balancing. By using the right combination of natural ingredients
+                the Clear Skin Kit helps your skin function properly while
+                avoiding pesky breakouts, congestion, and inflammation
+                altogether.
+              </div>
+              <div class="qa__content-item hidden" data-qa="2">
+                <h3>Light + Refreshing</h3>
+                <p>
+                  From your first application of each step in the Clear Skin
+                  Kit, your skin will feel clean, refreshed, and healthy. We
+                  don't use harsh ingredients that cause uncomfortable side
+                  effects or thick creams that leave your skin feeling heavy.
+                </p>
+                <h3>No-Rinse Formula</h3>
+                <p>
+                  Our #2 Radiant Cleansing Nectar is rinse free! That means when
+                  you're done applying, you can just move on to the next step.
+                  Unlike typical foaming cleansers, our Radiant Cleansing Nectar
+                  is created with essential oils and other natural ingredients
+                  that are expertly combined to comfortably stay on your skin
+                  and provide lasting nourishment.
+                </p>
+                <h3>Smooth + Supple</h3>
+                <p>
+                  Healthy skin is in your reach. With regular application of our
+                  combination of natural ingredients, you can look forward to a
+                  smooth complexion with just the right amount of hydration.
+                </p>
+                <h3>Acne Purge</h3>
+                <p>
+                  Our products are full of botanicals rich in minerals that help
+                  extract bacteria and impurities from the skin. You might
+                  notice that you have an increase in breakouts shortly after
+                  beginning our skincare routine. This is just your skin purging
+                  the congestion that is backed up in your pores to make way for
+                  a clear complexion. Not everyone has an acne purge, but it's a
+                  sign that your skin is getting rid of the bad and absorbing
+                  the good.
+                </p>
+              </div>
+              <div class="qa__content-item hidden" data-qa="3">
+                <h3>#1 Clarifying Hydration Dew</h3>
+                <p>
+                  Deionized Water (Aqua), Rosa Damascena (Rose) Flower
+                  Distillate, Cucumis Sativus (Cucumber) Fruit Water, Chamomilla
+                  Recutita (Matricaria) Flower Extract, Glycerin, Lactobacillus
+                  Ferment, Calendula Officinalis Flower Extract, Serenoa Repens
+                  (Saw Palmetto) Fruit Extract, Vitis Venifera (Grape) Seed
+                  Extract, Melia Azadirachta Flower Extract, Aloe Barbadensis
+                  Flower Extract, Coccinia Indica Fruit Extract, Pentylene
+                  Glycol (Vegetable Based), Corallina Officinalis Extract,
+                  Curcuma Longa (Turmeric) Root Extract, Melia Azadirachta Leaf
+                  Extract, Ocimum Sanctum Leaf Extract, Solanum Melongena
+                  (Eggplant) Fruit Extract
+                </p>
+                <h3>#2 Radiant Cleansing Nectar</h3>
+                <p>
+                  Simmondsia Chinensis (Jojoba) Seed Oil, Vitis Vinifera (Grape)
+                  Seed Oil, Deionized Water, Hamamelis Virginiana (Witch Hazel)
+                  Water, Matricaria Recutita Flower (Chamomile) Water, Crataegus
+                  Monogyna (Hawthorn) Fruit Extract, Helichrysum Italicum
+                  Distillate, Pyrus Malus (Apple) Seed Oil, Colloidal Silver,
+                  Alcohol, Leptospermum Scoparium (Manuka) Oil, Tocopherol
+                  Acetate (Vitamin E), Eclipta Prostrata Extract, Melia
+                  Azadirachta Leaf Extract, Moringa Oleifera Seed Oil.'
+                </p>
+                <h3>#3 Clear Skin Elixir</h3>
+                <p>
+                  Zinc Oxide (non-nano), Deionized Water, Hamamelis Virginiana
+                  (Witch Hazel) Water, French Pink Clay, Matricaria Recutita
+                  Flower (Chamomile) Water, Coral, Crataegus Monogyna (Hawthorn)
+                  Fruit Extract, Simmondsia Chinensis (Jojoba) Seed Oil, Vitis
+                  Vinifera (Grape) Seed Oil, Citrus Grandis (Grapefruit) Peel
+                  Oil, Citrus Aurantium Bergamia (Bergamot) Fruit Oil, Rubus
+                  Idaeus (Raspberry) Seed Oil, Alcohol, Sodium Levulinate,
+                  Sodium Anisate, Glycerin, Melaleuca Alternifolia (Tea Tree)
+                  Leaf Oil, Tocopherol Acetate (Vitamin E), Oryza Sativa (Rice)
+                  Starch, Leptospermum Scoparium (Manuka) Oil.
+                </p>
+                <h3>#4 Flawless Nourishment Cream</h3>
+                <p>
+                  Butyrospermum Parkii (Shea) Butter, Vitis Vinifera (Grape)
+                  Seed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Euphorbia
+                  Cerifera (Candelilla) Wax, Cucurbita Pepo (Pumpkin) Seed Oil,
+                  Persea Gratissima (Avocado) Oil, Astrocaryum (Tucuma) Seed
+                  Butter, Camellia Oleifera (Camellia) Seed Oil, Prunus
+                  Amygdalus Dulcis (Sweet Almond) Oil, Rubus Idaeus (Raspberry)
+                  Seed Oil, Theobroma Grandiflorum (Cupuacu) Butter, Rosa Canina
+                  (Rose Hips) Fruit Oil, Citrus Paradisi (Grapefruit) Peel Oil,
+                  Glyceryl Behenate, Oryza Sativa (Rice) Starch, Rhus
+                  Verniciflua Peel Wax/Rhus Succedanea Fruit Wax, Tocopherol
+                  (Vitamin E), Citrus Aurantium Bergamia (Bergamot) Fruit Oil,
+                  Eclipta Prostrata Extract, Melia Azadirachta Leaf Extract,
+                  Moringa Oleifera Seed Oil.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Benefits" class="h-[80vh] bg-gray-300"></section>
       <section id="Steps">
-        <header></header>
+        <div class="page-wrapper py-6">
+          <header>Steps to Glowing Skin</header>
+          <div class="flex flex-wrap justify-center gap-3 mt-20">
+            <div class="step max-w-[270px]">
+              <div class="step-img">
+                <img src="https://picsum.photos/270/270" alt="" />
+              </div>
+              <div class="step__number">Step 1</div>
+              <div class="step__title">Mist</div>
+              <div class="step__description">
+                Shake the #1 Clarifying Hydration Dew before misting your face
+                with 8-10 sprays.
+              </div>
+            </div>
+            <div class="step max-w-[270px]">
+              <div class="step-img">
+                <img src="https://picsum.photos/270/270" alt="" />
+              </div>
+              <div class="step__number">Step 2</div>
+              <div class="step__title">Buff + Cleanse</div>
+              <div class="step__description">
+                Shake #2 Radiant Cleansing Nectar until colors are combined.
+                Saturate a cotton pad with 3-4 circles of Nectar. Using firm
+                pressure buff onto your face and neck. Repeat with the opposite
+                side of cotton pad. No rinse needed!
+              </div>
+            </div>
+            <div class="step max-w-[270px]">
+              <div class="step-img">
+                <img src="https://picsum.photos/270/270" alt="" />
+              </div>
+              <div class="step__number">Step 3</div>
+              <div class="step__title">Repair (nighttime)</div>
+              <div class="step__description">
+                Tap the bottom of #3 Clear Skin Elixir in the palm of your hand
+                to settle the bubbles. Press 1-2 pumps of the Elixir into your
+                hand and massage across your face. Let dry for 10 minutes before
+                bed and wear overnight.
+              </div>
+            </div>
+            <div class="step max-w-[270px]">
+              <div class="step-img">
+                <img src="https://picsum.photos/270/270" alt="" />
+              </div>
+              <div class="step__number">Step 4</div>
+              <div class="step__title">Moisturize (daytime)</div>
+              <div class="step__description">
+                Following #2, spritz your face with 3-4 sprays of #1 Dew. Using
+                the spatula, scoop out ¼ pea-sized amount of #4 Flawless
+                Nourishment Cream. Warm it between your fingertips and dab it in
+                four dots across your face. Gently massage into your skin.
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <section id="Stats"></section>
+      <section id="Stats">
+        <div class="flex flex-col md:flex-row justify-center items-center">
+          <picture class="stats-left basis-[50%]">
+            <source
+              srcset="https://picsum.photos/952/952"
+              media="(min-width: 768px)"
+            />
+            <img src="https://picsum.photos/420/420" alt="" />
+          </picture>
+          <picture class="stats-right basis-[50%]">
+            <source
+              srcset="https://picsum.photos/952/952"
+              media="(min-width: 768px)"
+            />
+            <img src="https://picsum.photos/420/420" alt="" />
+          </picture>
+        </div>
+      </section>
       <section id="Works">
-        <header></header>
+        <div class="page-wrapper py-20">
+          <header>How It Works</header>
+          <div
+            class="flex flex-wrap flex-col md:flex-row items-center justify-center"
+          >
+            <div
+              class="right__arrow p-2 flex flex-col items-center justify-center"
+            >
+              <img src="assets/img/Glow How it Works AntiAge.jpg" alt="" />
+              <p>Anti-Aging</p>
+            </div>
+            <div
+              class="right__arrow p-2 flex flex-col items-center justify-center"
+            >
+              <img src="assets/img/Glow How it Works Cell Regen.jpg" alt="" />
+              <p>Cell Regeneration</p>
+            </div>
+            <div
+              class="right__arrow p-2 flex flex-col items-center justify-center"
+            >
+              <img src="assets/img/Glow How it Works Lifting.jpg" alt="" />
+              <p>Collagen Lifting</p>
+            </div>
+            <div
+              class="right__arrow p-2 flex flex-col items-center justify-center"
+            >
+              <img
+                src="assets/img/Glow How it Works Reduce Wrinkles.jpg"
+                alt=""
+              />
+              <p>Reduce Wrinkles</p>
+            </div>
+            <div
+              class="right__arrow p-2 flex flex-col items-center justify-center"
+            >
+              <img src="assets/img/Glow How it Works Revital.jpg" alt="" />
+              <p>Revitalize</p>
+            </div>
+            <div
+              class="right__arrow p-2 flex flex-col items-center justify-center"
+            >
+              <img src="assets/img/Glow How it Works Skin Barrier.jpg" alt="" />
+              <p>Heal Skin Barrier</p>
+            </div>
+            <div class="p-2 flex flex-col items-center justify-center">
+              <img src="assets/img/Glow How it Works Whitening.jpg" alt="" />
+              <p>Even Skin Tone</p>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="Ingredient">
-        <header></header>
+        <header>List of Ingredients</header>
       </section>
       <section id="Seals"></section>
       <section id="B&A">
-        <header></header>
+        <header>Before / Afters</header>
       </section>
       <section id="Authority"></section>
       <section id="Reviews"></section>
