@@ -7,6 +7,12 @@
     <title>Glow Style</title>
     <!-- Font -->
     <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
     <!-- CSS -->
     <link rel="stylesheet" href="assets/styles/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -396,14 +402,183 @@
       </section>
       <section id="Ingredient">
         <header>List of Ingredients</header>
+        <div class="page-wrapper">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper ing-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="assets/img/Glow Watercolor Avocado.png" alt="" />
+                <h2>Avocado</h2>
+                <h3>Rich in Antioxidants</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Pariatur ad aperiam corrupti nisi repudiandae libero debitis
+                  aliquam dicta culpa accusantium.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/Glow Watercolor Carrot.png" alt="" />
+                <h2>Carrot</h2>
+                <h3>Rich in Antioxidants</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Pariatur ad aperiam corrupti nisi repudiandae libero debitis
+                  aliquam dicta culpa accusantium.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/Glow Watercolor Kiwi.png" alt="" />
+                <h2>Kiwi</h2>
+                <h3>Rich in Antioxidants</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Pariatur ad aperiam corrupti nisi repudiandae libero debitis
+                  aliquam dicta culpa accusantium.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/Glow Watercolor Lemon.png" alt="" />
+                <h2>Lemon</h2>
+                <h3>Rich in Antioxidants</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Pariatur ad aperiam corrupti nisi repudiandae libero debitis
+                  aliquam dicta culpa accusantium.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/Glow Watercolor Orange.png" alt="" />
+                <h2>Orange</h2>
+                <h3>Rich in Antioxidants</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Pariatur ad aperiam corrupti nisi repudiandae libero debitis
+                  aliquam dicta culpa accusantium.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/Glow Watercolor Sunflower.png" alt="" />
+                <h2>Sunflower</h2>
+                <h3>Rich in Antioxidants</h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Pariatur ad aperiam corrupti nisi repudiandae libero debitis
+                  aliquam dicta culpa accusantium.
+                </p>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
       </section>
-      <section id="Seals"></section>
+      <section id="Seals">
+        <div class="page-wrapper my-6">
+          <div class="flex flex-wrap justify-center items-center gap-3">
+            <div class="p-2">
+              <img src="assets/img/Glow Cruelty Free Seal.png" alt="" />
+            </div>
+            <div class="p-2">
+              <img src="assets/img/Glow Key Ingredients Seal.png" alt="" />
+            </div>
+            <div class="p-2">
+              <img src="assets/img/Glow Paraben Free Seal.png" alt="" />
+            </div>
+            <div class="p-2">
+              <img src="assets/img/Glow Recommended Seal.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="B&A">
-        <header>Before / Afters</header>
+        <header>Before & After</header>
+        <div class="page-wrapper">
+          <div
+            class="flex flex-wrap justify-center items-center gap-3 my-20 uppercase"
+          >
+            <div class="flex flex-col">
+              <div class="px-2">
+                <img src="assets/img/Glow BA1.jpg" alt="" />
+              </div>
+              <div class="flex px-2 justify-between">
+                <span class="pl-2"><strong>Before</strong></span>
+                <div class="vertical-divider pl-2"><strong>After</strong></div>
+                <span></span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <div class="px-2">
+                <img src="assets/img/Glow BA2.jpg" alt="" />
+              </div>
+              <div class="flex px-2 justify-between">
+                <span class="pl-2"><strong>Before</strong></span>
+                <div class="vertical-divider pl-2"><strong>After</strong></div>
+                <span></span>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <div class="px-2">
+                <img src="assets/img/Glow BA3.jpg" alt="" />
+              </div>
+              <div class="flex px-2 justify-between">
+                <span class="pl-2"><strong>Before</strong></span>
+                <div class="vertical-divider pl-2"><strong>After</strong></div>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="Authority"></section>
       <section id="Reviews"></section>
     </main>
     <footer></footer>
+    <script type="module">
+      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        loop: true,
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+          bulletClass: "swiper-pagination-bullet",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          hide: true,
+        },
+        slidesPerView: 1,
+        breakpoints: {
+          // when window width is >= 400px
+          400: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          // when window width is >= 768px
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
+        autoHeight: true,
+      });
+    </script>
   </body>
 </html>
