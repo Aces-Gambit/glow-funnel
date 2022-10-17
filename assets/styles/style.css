@@ -16,18 +16,23 @@
   --font-kaushan: "Kaushan Script", cursive;
   --font-header: "serif", sans-serif;
   --bg-nav: rgb(128, 128, 128, 0.3);
+  --bg-footer: #434343;
   --bg-alt: #f9dbd0;
   --bg-nav-top: #000;
   --bg-grey: #fbfbfb;
   --text-primary: #000;
   --text-invert: #fff;
   --text-grey: #333;
+  --text-footer: #f9dbd0;
+  --accordion-color: rgb(85, 85, 85);
   --color-accent: #d0ae91;
   --color-accent-light: #fbe6de;
-  --color-accent-orange: hsl(16, 100%, 65%);
-  --color-accent-orange-light: hsl(16, 100%, 95%);
+  --color-accent-orange: #ff7c4d;
+  --color-accent-orange-light: #ffece5e0;
   --color-nav-button: hsl(0, 0%, 91%);
   --btn-radius: 5px;
+  --ease: ease-in-out;
+  --timing: 300ms;
 }
 
 /* Box sizing rules */
@@ -248,6 +253,10 @@ section header {
   background-color: var(--bg-nav);
 }
 
+.bg-footer {
+  background-color: var(--bg-footer);
+}
+
 .bg-alt {
   background-color: var(--bg-alt);
 }
@@ -268,6 +277,18 @@ section header {
 }
 .text-grey {
   color: var(--text-grey);
+}
+.text-alt {
+  color: var(--bg-alt);
+}
+.text-footer {
+  color: var(--text-footer) !important;
+}
+.text-footer-bg {
+  color: var(--bg-footer);
+}
+.text-accent {
+  color: var(--color-accent) !important;
 }
 
 .text-xs {
@@ -305,6 +326,7 @@ section header {
   border-radius: var(--btn-radius);
   padding: 0.65rem 1rem;
   gap: 0.5rem;
+  font-size: var(--font-xs);
 }
 .btn-nav-shop {
   min-width: 115px;
@@ -334,7 +356,7 @@ section header {
 }
 
 .nav-icon {
-  font-size: var(--font-md);
+  font-size: var(--font-xs);
 }
 
 .underline-sm {
@@ -348,7 +370,7 @@ section header {
     font-size: var(--font-2xl);
   }
   .btn-menu {
-    padding: 0.65rem 2rem;
+    padding: 12px 17px 10px;
   }
   .btn-search a {
     padding-right: 2rem;
@@ -362,6 +384,117 @@ section header {
 }
 
 /* Block */
+/* Accordion */
+
+/* Basic Accordion Styles */
+.accordion {
+  width: 100%;
+  box-shadow: 0 1px 8px rgba(#000, 0.25);
+  font-size: var(--font-size-lg);
+  padding-inline: 8px;
+}
+
+/* Radio Inputs */
+.accordion input[name="panel"] {
+  display: none;
+}
+
+/* Labels */
+.accordion label {
+  position: relative;
+  display: block;
+  padding: 0.5em;
+  padding-right: 3em;
+  text-transform: uppercase;
+  border-top: 1px solid var(--accordion-color);
+  font-size: 1.35em;
+  font-weight: 700;
+  text-shadow: 0 1px 0 rgba(#fff, 0.75);
+  color: var(--text-grey);
+  cursor: pointer;
+  transition: all var(--timing) var(--ease);
+}
+@media screen and (max-width: 600px) {
+  .accordion label {
+    font-size: 1em;
+  }
+}
+
+/* Panel */
+
+.accordion label:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f078";
+  position: absolute;
+  right: 1em;
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.2em;
+  color: var(--text-grey);
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: inset 0 1px 6px rgba(#000, 0.5), 0 1px 0 #fff;
+  text-shadow: 0 1px 0 rgba(#000, 0.75);
+  transform: translateY(6px);
+  transition: all var(--timing) var(--ease);
+}
+
+.accordion label:hover {
+  color: var(--color-accent-orange);
+}
+.accordion label:hover::after {
+  background-color: var(--color-accent-orange-light);
+}
+
+.accordion input:checked + label {
+  color: var(--color-accent-orange);
+}
+
+.accordion input:checked + label:after {
+  /* content: '\f077'; */
+  /* adjust line-height to vertically center icon */
+  transform: translateY(6px) rotate(180deg);
+  background-color: var(--color-accent-orange-light);
+}
+
+/* Panel Content */
+.accordion__content {
+  overflow: hidden;
+  max-height: 0em;
+  position: relative;
+  background-color: var(--color-accent-orange-light);
+  padding: 0 1.5em;
+  border-radius: 5px;
+  transition: all var(--timing) var(--ease);
+}
+
+.accordion__content:not(:last-of-type) {
+  box-shadow: inset 0 -2px 2px rgba(#000, 0.25),
+    inset 4px 0 0 0 var(--color-accent), inset 0 3px 6px rgba(#000, 0.75);
+}
+
+.accordion__content > .accordion__header {
+  padding: 1em 0;
+  font-weight: 700;
+}
+
+.accordion__content > .accordion__body {
+  font-size: 1em;
+  line-height: 1.4em;
+  padding: 0 0 1.5em;
+}
+.accordion__content p {
+  color: var(--accordion-color);
+  font-size: var(--font-md);
+  border-radius: 5px;
+}
+
+input[name="panel"]:checked ~ .accordion__content {
+  /* Get this as close to what height you expect */
+  max-height: 50em;
+}
+
 #Benefits h3 {
   font-size: var(--font-xl);
   font-weight: 500;
@@ -373,7 +506,6 @@ section header {
   position: absolute;
 }
 .benefits-center-img {
-  position: absolute;
   margin: 0 auto;
   bottom: 0;
   left: 50%;
@@ -526,7 +658,7 @@ section header {
     border-bottom: 5px solid transparent;
   }
 }
-
+/* Ingredient Slider */
 .swiper {
   width: 100%;
 }
@@ -583,6 +715,82 @@ section header {
   border-left: 2px solid var(--text-grey);
   height: 20px;
   transform: translateX(-6px);
+}
+
+/* Footer and Form Grid */
+.footer-icon {
+  position: absolute;
+  padding: 2px;
+  font-size: var(--font-2xl);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer-icon-wrapper {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+[data-form-1="1"] {
+  grid-area: form-1-1;
+}
+[data-form-1="2"] {
+  grid-area: form-1-2;
+}
+[data-form-1="3"] {
+  grid-area: form-1-3;
+}
+[data-form-1="4"] {
+  grid-area: form-1-4;
+}
+
+[data-form-2="1"] {
+  grid-area: form-2-1;
+}
+[data-form-2="2"] {
+  grid-area: form-2-2;
+}
+[data-form-2="3"] {
+  grid-area: form-2-3;
+}
+[data-form-2="4"] {
+  grid-area: form-2-4;
+}
+
+.footer-grid {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "form-1-1"
+    "form-1-2"
+    "form-1-3"
+    "form-1-4"
+    "form-2-1"
+    "form-2-2"
+    "form-2-3"
+    "form-2-4";
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "form-1-1 form-2-1"
+      "form-1-2 form-2-2"
+      "form-1-3 form-2-3"
+      "form-1-4 form-2-4";
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
 }
 
 /* Exception */
