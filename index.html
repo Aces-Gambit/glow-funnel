@@ -103,7 +103,146 @@
       </header>
     </nav>
     <main>
-      <section id="MainContent" class="h-[80vh] bg-gray-300"></section>
+      <section id="MainContent" class="nav-space mb-10" data-type="mainContent">
+        <div
+          class="page-wrapper flex flex-col md:flex-row justify-center gap-x-[100px] gap-y-[20px]"
+        >
+          <div class="swiper-container swiper__hero basis-[50%] max-w-[700px]">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/Glow Hero Collection.jpg"
+                  alt="Slide 1"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/Glow Hero Cleanser.jpg"
+                  alt="Slide 2"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/Glow Hero Serum.png"
+                  alt="Slide 3"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/Glow Hero Ampule.jpg"
+                  alt="Slide 4"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/Glow Hero Cream.jpg"
+                  alt="Slide 5"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/Glow Hero Refunds.jpg"
+                  alt="Slide 6"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/Glow Hero Us vs Them.jpg"
+                  alt="Slide 7"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/Glow Hero Before and After1.jpg"
+                  alt="Slide 8"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/Glow Hero Before and After2.jpg"
+                  alt="Slide 9"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="assets/img/Glow Hero Before and After3.jpg"
+                  alt="Slide 10"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination__hero"></div>
+            <div class="swiper-button-prev swiper-button-prev__hero"></div>
+            <div class="swiper-button-next swiper-button-next__hero"></div>
+          </div>
+          <div class="flex flex-col basis-[50%] max-w-[400px]">
+            <div class="hero__quote">
+              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+              maiores sunt voluptas eveniet totam alias soluta sapiente id quasi
+              illum."
+            </div>
+            <header>Clear Skin Kit</header>
+            <div class="hero__review"></div>
+            <div class="hero__description">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum cupiditate molestias reiciendis tempora ipsam repellat
+              similique eos amet, magnam rerum.
+            </div>
+            <div class="hero__item-list">
+              Includes:<br />
+              <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+              </ul>
+            </div>
+            <div class="hero__price-row">
+              <div class="flex mx-10 justify-between">
+                <s>$159.00</s><strong>$149.00</strong
+                ><span class="ml-14"></span>
+              </div>
+            </div>
+            <div class="hero__cta"></div>
+            <div class="hero__seals">
+              <div class="flex justify-between items-center gap-3 my-6 mx-auto">
+                <div class="p-2 max-w-[75px]">
+                  <img
+                    src="assets/img/Glow Cruelty Free Seal.png"
+                    alt="Cruelty Free Seal"
+                  />
+                </div>
+                <div class="p-2 max-w-[75px]">
+                  <img
+                    src="assets/img/Glow Key Ingredients Seal.png"
+                    alt="Key Ingredients Seal"
+                  />
+                </div>
+                <div class="p-2 max-w-[75px]">
+                  <img
+                    src="assets/img/Glow Paraben Free Seal.png"
+                    alt="Paraben Free Seal"
+                  />
+                </div>
+                <div class="p-2 max-w-[75px]">
+                  <img
+                    src="assets/img/Glow Recommended Seal.png"
+                    alt="Recommended Seal"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="How">
         <div class="relative">
           <div class="page-wrapper">
@@ -642,7 +781,7 @@
       <section id="Ingredient">
         <header>List of Ingredients</header>
         <div class="page-wrapper">
-          <div class="swiper">
+          <div class="swiper swiper__ing">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper ing-wrapper">
               <!-- Slides -->
@@ -708,10 +847,10 @@
               </div>
             </div>
             <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination swiper-pagination__ing"></div>
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev swiper-button-prev__ing"></div>
+            <div class="swiper-button-next swiper-button-next__ing"></div>
           </div>
         </div>
       </section>
@@ -924,23 +1063,44 @@
     <script type="module">
       import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
 
-      const swiper = new Swiper(".swiper", {
+      const swiper = new Swiper(".swiper__hero", {
         // Optional parameters
         loop: true,
         // If we need pagination
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-pagination__hero",
+          clickable: true,
+          bulletClass: "swiper-pagination-bullet",
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next__hero",
+          prevEl: ".swiper-button-prev__hero",
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          hide: true,
+        },
+        slidesPerView: 1,
+        autoHeight: true,
+      });
+      const swiperIng = new Swiper(".swiper__ing", {
+        // Optional parameters
+        loop: true,
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination__ing",
           clickable: true,
           bulletClass: "swiper-pagination-bullet",
         },
 
         // Navigation arrows
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next__ing",
+          prevEl: ".swiper-button-prev__ing",
         },
         scrollbar: {
-          el: ".swiper-scrollbar",
+          el: ".swiper-scrollbar__ing",
           hide: true,
         },
         slidesPerView: 1,
