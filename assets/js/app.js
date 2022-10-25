@@ -1,3 +1,5 @@
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
+
 const pageTop = document.querySelector(".page-top");
 const navBar = document.querySelector('[data-type="navBar"]');
 const mainContent = document.querySelector('[data-type="mainContent"]');
@@ -52,4 +54,100 @@ qaHeaderItem.forEach((item) => {
       });
     }
   });
+});
+
+const swiperThumb = new Swiper(".swiper__thumb", {
+  loop: true,
+  spaceBetween: 5,
+  slidesPerView: 5,
+  freeMode: true,
+  watchSlidesProgress: true,
+  centeredSlides: true,
+});
+const swiperHero = new Swiper(".swiper__hero", {
+  loop: true,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next__hero",
+    prevEl: ".swiper-button-prev__hero",
+  },
+  thumbs: {
+    swiper: swiperThumb,
+  },
+  zoom: {
+    maxRatio: 1.5,
+  },
+});
+
+//Hero Swiper Config
+// const swiperHeroOld = new Swiper(".swiper__hero", {
+//   // Optional parameters
+//   loop: true,
+//   // If we need pagination
+//   pagination: {
+//     el: ".swiper-pagination__hero",
+//     clickable: true,
+//     bulletClass: "swiper-pagination-bullet",
+//   },
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: ".swiper-button-next__hero",
+//     prevEl: ".swiper-button-prev__hero",
+//   },
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//     hide: true,
+//   },
+// });
+//Hero Swiper Zoom
+const swiperSlide = document.getElementsByClassName("swiper-slide-hero");
+for (let index = 0; index < swiperSlide.length; index++) {
+  swiperSlide[index].addEventListener("mouseover", function (e) {
+    swiperHero.zoom.in();
+  });
+
+  swiperSlide[index].addEventListener("mouseout", function (e) {
+    swiperHero.zoom.out();
+  });
+}
+
+//Ingredient Swiper Config
+const swiperIng = new Swiper(".swiper__ing", {
+  // Optional parameters
+  loop: true,
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination__ing",
+    clickable: true,
+    bulletClass: "swiper-pagination-bullet",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next__ing",
+    prevEl: ".swiper-button-prev__ing",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar__ing",
+    hide: true,
+  },
+  slidesPerView: 1,
+  breakpoints: {
+    // when window width is >= 400px
+    400: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+  autoHeight: true,
 });

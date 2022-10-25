@@ -670,13 +670,115 @@ input[name="panel"]:checked ~ .accordion__content {
   }
 }
 
+.btn__checkout {
+  display: block;
+  background-color: var(--text-grey);
+  color: var(--text-invert);
+  font-size: var(--font-lg);
+  font-family: var(--font-gotham-bold);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn__checkout:hover {
+  background-color: var(--color-accent);
+  color: var(--text-primary);
+}
+
 /* Hero Slider */
 .swiper-container.swiper__hero {
   width: 100%;
-  height: 100%;
+  height: auto;
   position: relative;
   overflow: hidden;
 }
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper.swiper__thumb {
+  width: 100%;
+  height: auto;
+}
+
+.swiper.swiper__hero {
+  width: 100%;
+  height: auto;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper__hero {
+  height: 80%;
+  width: 100%;
+}
+
+.swiper__thumb {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 2px 0;
+}
+
+.swiper__thumb .swiper-slide {
+  width: 20%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.swiper__thumb .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Ingredient Slider */
 .swiper {
   width: 100%;
