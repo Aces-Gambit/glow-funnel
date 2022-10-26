@@ -15,6 +15,7 @@
   --font-gotham-bold: "Gotham Bold", sans-serif;
   --font-kaushan: "Kaushan Script", cursive;
   --font-header: "serif", sans-serif;
+  --font-assistant: "Assistant", sans-serif;
   --bg-nav: rgb(128, 128, 128, 0.3);
   --bg-footer: #434343;
   --bg-alt: #f9dbd0;
@@ -281,6 +282,9 @@ section header {
 }
 .font-book {
   font-family: var(--font-book);
+}
+.font-assistant {
+  font-family: var(--font-assistant);
 }
 
 .text-invert {
@@ -687,7 +691,7 @@ input[name="panel"]:checked ~ .accordion__content {
   transition: all 0.3s ease-in-out;
 }
 .btn__checkout:hover {
-  background-color: var(--color-accent);
+  background-color: var(--color-accent-light);
   color: var(--text-primary);
 }
 
@@ -918,9 +922,39 @@ input[name="panel"]:checked ~ .accordion__content {
       "form-1-2 form-2-2"
       "form-1-3 form-2-3"
       "form-1-4 form-2-4";
-    gap: 1rem;
+    gap: 0.25rem 7rem;
     margin-bottom: 2rem;
   }
 }
 
+.footer-grid button {
+  background-color: var(--color-accent) !important;
+  border-radius: 0 4px 4px 0 !important;
+}
+
+.footer-grid input {
+  border-radius: 4px 0 0 4px !important;
+  background-color: var(--color-accent-light) !important;
+}
+.footer-grid input::placeholder {
+  color: var(--color-accent) !important;
+}
+
+button.go3582494590,
+button.go3153183369 {
+  background-color: var(--color-accent-light) !important;
+  border-radius: 4px 0 0 4px !important;
+  border-block: 1px var(--color-accent) solid !important;
+  border-left: 1px var(--color-accent) solid !important;
+}
+.go3153183369:hover button.go3582494590,
+.go3943117986:hover button.go3153183369 {
+  border-block: 1px black solid !important;
+  border-left: 1px black solid !important;
+}
+
+.go3153183369,
+.go3943117986 {
+  border-radius: 4px 0 0 4px !important;
+}
 /* Exception */
