@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
       rel="stylesheet"
     />
@@ -56,22 +60,24 @@
         <div
           class="nav-flex flex shrink-1 text-invert px-2 lg:px-20 gap-6 py-2 justify-between"
         >
-          <div class="nav-left flex gap-2 items-center basis-[20%]">
+          <div
+            class="nav-left flex gap-2 md:gap-8 items-center font-semibold basis-[20%]"
+          >
             <button class="btn-menu" data-type="menuToggleBtn">
               <i class="nav-icon fa fa-ellipsis-h hidden lg:block"></i>
               <i class="nav-icon fa fa-bars block lg:hidden"></i>
-              <span class="uppercase font-medium hidden lg:block">Menu</span>
+              <span class="uppercase text-sm hidden lg:block">Menu</span>
             </button>
             <div class="btn-search">
               <a href="#" class="flex gap-3 items-center">
                 <i class="nav-icon fa-solid fa-magnifying-glass"></i>
-                <span class="uppercase text-xs font-medium hidden lg:block"
-                  >Search</span
-                >
+                <span class="uppercase text-sm hidden lg:block">Search</span>
               </a>
             </div>
           </div>
-          <div class="nav-middle flex flex-col basis-[60%] items-center">
+          <div
+            class="nav-middle flex flex-col font-semibold basis-[60%] items-center"
+          >
             <div class="nav-logo">
               <img
                 src="https://unsplash.it/130/50"
@@ -81,7 +87,7 @@
               />
             </div>
             <ul
-              class="nav-list flex flex-wrap gap-6 justify-center pt-3 pb-5 uppercase font-medium text-sm hidden lg:flex"
+              class="nav-list flex flex-wrap gap-6 justify-center items-center pt-3 pb-2 uppercase text-md hidden lg:flex"
             >
               <li class="shrink-0">
                 <a href="#" class="btn-nav-shop">Shop Now</a>
@@ -93,10 +99,12 @@
               <li><a href="#">Professional Site</a></li>
             </ul>
           </div>
-          <div class="nav-right flex gap-2 items-center basis-[20%]">
+          <div
+            class="nav-right flex gap-2 items-center font-semibold basis-[20%]"
+          >
             <a
               href="#"
-              class="uppercase p-2 text-xs font-medium hidden lg:block"
+              class="uppercase p-2 text-sm font-medium hidden lg:block"
               >Get $25 off</a
             >
             <div class="flex">
@@ -104,7 +112,7 @@
                 href="/accounts/login"
                 class="btn-login flex gap-2 items-center"
               >
-                <span class="uppercase text-xs font-medium hidden md:block"
+                <span class="uppercase text-sm font-medium hidden md:block"
                   >login</span
                 >
                 <i class="nav-icon fa-regular fa-user"></i>
@@ -124,7 +132,7 @@
           class="menu__header text-accent-gold uppercase flex gap-2 items-center mb-6 w-full"
           data-type="menuToggleBtn"
         >
-          <i class="fa fa-times translate-y-[1px]"></i>
+          <i class="fa fa-times -translate-y-[1px]"></i>
           <span class="uppercase">menu</span>
         </button>
         <ul class="font-fancy pl-4 mb-10">
@@ -147,7 +155,7 @@
         </ul>
         <button
           href="#"
-          class="menu__gift-modal block w-full text-center border-2 border-menu-accent text-accent-gold py-2 mb-3"
+          class="menu__gift-modal block w-full uppercase text-center border-2 border-menu-accent text-accent-gold py-2 mb-3"
         >
           Get $25 Off
         </button>

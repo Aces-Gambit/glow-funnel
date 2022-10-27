@@ -1,6 +1,6 @@
 :root {
   --page-width: 1200px;
-  --font-size: 16px;
+  --font-size: 18px;
   --font-xs: 0.75rem;
   --font-sm: 0.875rem;
   --font-md: 1rem;
@@ -10,7 +10,7 @@
   --font-3xl: 2rem;
   --font-4xl: 2.5rem;
   --font-5xl: 3rem;
-  --font-base: "Gotham", sans-serif;
+  --font-base: "Mukta", sans-serif;
   --font-gotham-book: "Gotham Book", sans-serif;
   --font-gotham-bold: "Gotham Bold", sans-serif;
   --font-kaushan: "Kaushan Script", cursive;
@@ -24,6 +24,7 @@
   --text-primary: #000;
   --text-invert: #fff;
   --text-grey: #333;
+  --text-grey-light: #666;
   --text-footer: #f9dbd0;
   --accordion-color: rgb(85, 85, 85);
   --color-accent: #d0ae91;
@@ -35,7 +36,7 @@
   --btn-radius: 5px;
   --ease: ease-in-out;
   --timing: 300ms;
-  --nav-height: 118px;
+  --nav-height: 132px;
 }
 
 @media screen and (max-width: 768px) {
@@ -81,6 +82,7 @@ body {
   min-height: 200vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-size: var(--font-size);
   font-family: var(--font-base);
 }
 
@@ -219,6 +221,10 @@ select {
 }
 .menu.active {
   transform: translateX(0%);
+}
+/* data type menu */
+[data-type="menu"] ul > li:hover {
+  color: var(--text-grey-light);
 }
 
 section header {
@@ -386,6 +392,8 @@ section header {
   font-size: var(--font-xs);
 }
 .btn-nav-shop {
+  display: block;
+  text-align: center;
   min-width: 115px;
   background-color: var(--color-accent);
   color: var(--text-primary);
