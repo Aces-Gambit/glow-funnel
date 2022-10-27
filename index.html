@@ -47,7 +47,7 @@
     ></script>
   </head>
   <body>
-    <a class="skip-to-content-link uppercase" href="#mainContent"
+    <a class="skip-to-content-link uppercase" href="#MainContent"
       >Skip to Content</a
     >
     <div class="page-top" id="page-top"></div>
@@ -57,11 +57,11 @@
           class="nav-flex flex shrink-1 text-invert px-2 lg:px-20 gap-6 py-2 justify-between"
         >
           <div class="nav-left flex gap-2 items-center basis-[20%]">
-            <a class="btn-menu" href="#">
+            <button class="btn-menu" data-type="menuToggleBtn">
               <i class="nav-icon fa fa-ellipsis-h hidden lg:block"></i>
               <i class="nav-icon fa fa-bars block lg:hidden"></i>
               <span class="uppercase font-medium hidden lg:block">Menu</span>
-            </a>
+            </button>
             <div class="btn-search">
               <a href="#" class="flex gap-3 items-center">
                 <i class="nav-icon fa-solid fa-magnifying-glass"></i>
@@ -73,7 +73,12 @@
           </div>
           <div class="nav-middle flex flex-col basis-[60%] items-center">
             <div class="nav-logo">
-              <img src="https://unsplash.it/130/50" alt="Brand Logo" />
+              <img
+                src="https://unsplash.it/130/50"
+                alt="Brand Logo"
+                height="50"
+                width="130"
+              />
             </div>
             <ul
               class="nav-list flex flex-wrap gap-6 justify-center pt-3 pb-5 uppercase font-medium text-sm hidden lg:flex"
@@ -111,6 +116,54 @@
           </div>
         </div>
       </header>
+      <div
+        class="menu w-[300px] h-[100vh] py-[30px] px-[50px] bg-white shadow-lg shadow-black/20"
+        data-type="menu"
+      >
+        <button
+          class="menu__header text-accent-gold uppercase flex gap-2 items-center mb-6 w-full"
+          data-type="menuToggleBtn"
+        >
+          <i class="fa fa-times translate-y-[1px]"></i>
+          <span class="uppercase">menu</span>
+        </button>
+        <ul class="font-fancy pl-4 mb-10">
+          <li><a href="#">Customer Reviews</a></li>
+          <li><a href="#">Rewards FAQ</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Tutorials(How to)</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Partner Application</a></li>
+        </ul>
+        <div class="menu__header text-accent-gold uppercase mb-6">Shop</div>
+        <ul class="font-fancy pl-4 mb-10">
+          <li><a href="#">All products</a></li>
+          <li><a href="#">Acne Skincare</a></li>
+          <li><a href="#">Anti-Aging Skincare</a></li>
+          <li><a href="#">Body Skincare</a></li>
+          <li><a href="#">The Glow Gift Guide</a></li>
+          <li><a href="#">Professional Site</a></li>
+        </ul>
+        <button
+          href="#"
+          class="menu__gift-modal block w-full text-center border-2 border-menu-accent text-accent-gold py-2 mb-3"
+        >
+          Get $25 Off
+        </button>
+        <div class="flex w-full space justify-around">
+          <a
+            href="/account/login"
+            class="btn__sign-in py-2 bg-accent-light basis-[50%] text-center"
+            >Sign In</a
+          >
+          <a
+            href="/account/register"
+            class="btn__sign-up py-2 bg-accent basis-[50%] text-center"
+            >Sign Up</a
+          >
+        </div>
+      </div>
     </nav>
     <main>
       <section id="MainContent" class="nav-space mb-10" data-type="mainContent">

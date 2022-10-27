@@ -28,13 +28,14 @@
   --accordion-color: rgb(85, 85, 85);
   --color-accent: #d0ae91;
   --color-accent-light: #fbe6de;
+  --color-accent-gold: hsl(28, 34%, 52%);
   --color-accent-orange: #ff7c4d;
   --color-accent-orange-light: #ffece5e0;
   --color-nav-button: hsl(0, 0%, 91%);
   --btn-radius: 5px;
   --ease: ease-in-out;
   --timing: 300ms;
-  --nav-height: 60px;
+  --nav-height: 118px;
 }
 
 @media screen and (max-width: 768px) {
@@ -137,6 +138,23 @@ select {
 .nav-list li:not(:first-child):hover {
   text-shadow: #fff 0 0 2px, var(--color-accent-light) 0 0 20px;
 }
+.nav-left > *:hover,
+.nav-right > *:hover,
+.nav-left > * > *:hover,
+.nav-right > * > *:hover {
+  text-shadow: #fff 0 0 2px, var(--color-accent-light) 0 0 20px;
+}
+[data-type="navBar"].active .nav-list li:not(:first-child):hover {
+  text-shadow: #fff 0 0 2px, var(--color-accent-light) 0 0 20px;
+}
+[data-type="navBar"].active .nav-left > * > *:hover,
+[data-type="navBar"].active .nav-right > * > *:hover {
+  text-shadow: #fff 0px 0px 2px, var(--color-accent-orange) 0px 0px 20px,
+    var(--color-accent-orange) 0px 0px 30px,
+    var(--color-accent-orange) 0px 0px 40px,
+    var(--color-accent-orange) 0px 0px 50px,
+    var(--color-accent-orange) 0px 0px 75px;
+}
 
 [data-type="navBar"].active .nav-list li:not(:first-child):hover {
   text-shadow: #fff 0px 0px 2px, var(--color-accent-orange) 0px 0px 20px,
@@ -188,7 +206,19 @@ select {
 }
 
 .nav-space {
-  padding-top: calc(var(--nav-height) * 1);
+  padding-top: calc(var(--nav-height) * 0.75);
+}
+.menu {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  height: 100vh;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: 0.3s all ease;
+}
+.menu.active {
+  transform: translateX(0%);
 }
 
 section header {
@@ -276,7 +306,12 @@ section header {
 .bg-grey {
   background-color: var(--bg-grey);
 }
-
+.bg-accent {
+  background-color: var(--color-accent);
+}
+.bg-accent-light {
+  background-color: var(--color-accent-light);
+}
 .font-serif {
   font-family: serif;
 }
@@ -305,6 +340,9 @@ section header {
 .text-accent {
   color: var(--color-accent) !important;
 }
+.text-accent-gold {
+  color: var(--color-accent-gold) !important;
+}
 
 .text-xs {
   font-size: var(--font-xs);
@@ -332,6 +370,10 @@ section header {
 }
 .text-5xl {
   font-size: var(--font-5xl);
+}
+
+.border-menu-accent {
+  border-color: var(--color-accent-gold);
 }
 
 .btn-menu {
@@ -364,6 +406,12 @@ section header {
   padding: 0.65rem 1rem;
   border-radius: 0 5px 5px 0;
   background-color: var(--color-accent);
+}
+.btn__sign-in {
+  border-radius: 4px 0 0 4px;
+}
+.btn__sign-up {
+  border-radius: 0 4px 4px 0;
 }
 
 .nav-logo img {
@@ -956,5 +1004,9 @@ button.go3153183369 {
 .go3153183369,
 .go3943117986 {
   border-radius: 4px 0 0 4px !important;
+}
+
+.go3176171171 {
+  color: rgb(249, 219, 208) !important;
 }
 /* Exception */

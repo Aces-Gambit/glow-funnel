@@ -2,7 +2,6 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.brow
 
 const pageTop = document.querySelector(".page-top");
 const navBar = document.querySelector('[data-type="navBar"]');
-const mainContent = document.querySelector('[data-type="mainContent"]');
 
 //intersection observer observing the element pageTop
 const observer = new IntersectionObserver((entries) => {
@@ -56,6 +55,7 @@ qaHeaderItem.forEach((item) => {
   });
 });
 
+//Hero Thumbnail Slider Config
 const swiperThumb = new Swiper(".swiper__thumb", {
   loop: true,
   spaceBetween: 5,
@@ -64,6 +64,7 @@ const swiperThumb = new Swiper(".swiper__thumb", {
   watchSlidesProgress: true,
   centeredSlides: true,
 });
+//Hero Slider Config
 const swiperHero = new Swiper(".swiper__hero", {
   loop: true,
   spaceBetween: 10,
@@ -79,26 +80,6 @@ const swiperHero = new Swiper(".swiper__hero", {
   },
 });
 
-//Hero Swiper Config
-// const swiperHeroOld = new Swiper(".swiper__hero", {
-//   // Optional parameters
-//   loop: true,
-//   // If we need pagination
-//   pagination: {
-//     el: ".swiper-pagination__hero",
-//     clickable: true,
-//     bulletClass: "swiper-pagination-bullet",
-//   },
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: ".swiper-button-next__hero",
-//     prevEl: ".swiper-button-prev__hero",
-//   },
-//   scrollbar: {
-//     el: ".swiper-scrollbar",
-//     hide: true,
-//   },
-// });
 //Hero Swiper Zoom
 const swiperSlide = document.getElementsByClassName("swiper-slide-hero");
 for (let index = 0; index < swiperSlide.length; index++) {
@@ -150,4 +131,16 @@ const swiperIng = new Swiper(".swiper__ing", {
     },
   },
   autoHeight: true,
+});
+
+// Menu Toggle data-type="menu"
+const menu = document.querySelector('[data-type="menu"]');
+const menuToggleBtn = document.querySelectorAll('[data-type="menuToggleBtn"]');
+console.log(menuToggleBtn);
+
+//loop through the menuToggleBtn array assigning a click event to each element
+menuToggleBtn.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    menu.classList.toggle("active");
+  });
 });
