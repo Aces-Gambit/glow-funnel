@@ -16,7 +16,7 @@
   --font-kaushan: "Kaushan Script", cursive;
   --font-header: "serif", sans-serif;
   --font-assistant: "Assistant", sans-serif;
-  --bg-nav: rgb(128, 128, 128, 0.3);
+  --bg-nav: rgba(0, 0, 0, 0.18);
   --bg-footer: #434343;
   --bg-alt: #f9dbd0;
   --bg-nav-top: #000;
@@ -41,7 +41,7 @@
 
 @media screen and (max-width: 1000px) {
   :root {
-    --nav-height: 68px;
+    --nav-height: 76px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -134,6 +134,10 @@ select {
 .page-wrapper {
   max-width: var(--page-width);
   margin: 0 auto;
+}
+
+nav {
+  overflow: hidden;
 }
 
 .nav-flex {
@@ -436,8 +440,18 @@ section header {
   border-radius: 0 4px 4px 0;
 }
 
-.nav-logo img {
+.nav-logo {
+  background-image: url(/assets/img/Noche\ Logo\ Text\ Invert.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  max-width: 375px;
+  height: 60px;
   margin: 0 auto;
+}
+[data-type="navBar"].active .nav-logo {
+  background-image: url(/assets/img/Noche\ Logo\ Text.png);
 }
 
 .nav-icon {
