@@ -136,11 +136,23 @@ const swiperIng = new Swiper(".swiper__ing", {
 // Menu Toggle data-type="menu"
 const menu = document.querySelector('[data-type="menu"]');
 const menuToggleBtn = document.querySelectorAll('[data-type="menuToggleBtn"]');
-console.log(menuToggleBtn);
 
 //loop through the menuToggleBtn array assigning a click event to each element
 menuToggleBtn.forEach((btn) => {
   btn.addEventListener("click", function () {
     menu.classList.toggle("active");
+  });
+});
+
+//Search Toggle data-type="search"
+const search = document.querySelector('[data-type="search"]');
+const searchToggleBtn = document.querySelectorAll(
+  '[data-type="searchToggleBtn"]'
+);
+
+//loop through the searchToggleBtn array assigning a click event to each element
+searchToggleBtn.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    search.classList.toggle("active");
   });
 });

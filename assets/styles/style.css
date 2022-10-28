@@ -39,6 +39,11 @@
   --nav-height: 132px;
 }
 
+@media screen and (max-width: 1000px) {
+  :root {
+    --nav-height: 68px;
+  }
+}
 @media screen and (max-width: 768px) {
   :root {
     --nav-height: 0px;
@@ -187,6 +192,15 @@ select {
 [data-type="navBar"].active .btn-login,
 [data-type="navBar"].active .btn-nav-shop {
   background-color: var(--color-accent-light);
+}
+
+.search__bar {
+  top: -100%;
+  transition: all 0.3s ease-in-out;
+}
+.search__bar.active {
+  top: 0;
+  transition: all 0.3s ease-in-out;
 }
 
 .skip-to-content-link {
