@@ -315,18 +315,16 @@ section header {
   opacity: 1;
 }
 
+/* Background Colors */
 .bg-nav {
   background-color: var(--bg-nav);
 }
-
 .bg-footer {
   background-color: var(--bg-footer);
 }
-
 .bg-alt {
   background-color: var(--bg-alt);
 }
-
 .bg-grey {
   background-color: var(--bg-grey);
 }
@@ -346,6 +344,7 @@ section header {
   font-family: var(--font-assistant);
 }
 
+/* Text Colors */
 .text-invert {
   color: var(--text-invert);
 }
@@ -368,6 +367,7 @@ section header {
   color: var(--color-accent-gold) !important;
 }
 
+/* Font Size */
 .text-xs {
   font-size: var(--font-xs);
 }
@@ -396,10 +396,12 @@ section header {
   font-size: var(--font-5xl);
 }
 
+/* Borders */
 .border-menu-accent {
   border-color: var(--color-accent-gold);
 }
 
+/* Buttons */
 .btn-menu {
   display: flex;
   align-items: center;
@@ -439,7 +441,36 @@ section header {
 .btn__sign-up {
   border-radius: 0 4px 4px 0;
 }
+.btn__checkout {
+  display: block;
+  background-color: var(--text-grey);
+  color: var(--text-invert);
+  font-size: var(--font-lg);
+  font-family: var(--font-gotham-bold);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn__checkout:hover {
+  background-color: var(--color-accent-light);
+  color: var(--text-primary);
+}
 
+/* Underlines */
+.underline-sm {
+  width: 64px;
+  border-bottom: 2px solid var(--text-primary);
+  padding-bottom: 3.5rem;
+}
+
+/* Block */
+/* Nav Icons and Images */
 .nav-logo {
   background-image: url(/assets/img/Noche\ Logo\ Text\ Invert.png);
   background-repeat: no-repeat;
@@ -456,12 +487,6 @@ section header {
 
 .nav-icon {
   font-size: var(--font-xs);
-}
-
-.underline-sm {
-  width: 64px;
-  border-bottom: 2px solid var(--text-primary);
-  padding-bottom: 3.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -482,7 +507,6 @@ section header {
   }
 }
 
-/* Block */
 /* Accordion */
 
 /* Basic Accordion Styles */
@@ -594,6 +618,7 @@ input[name="panel"]:checked ~ .accordion__content {
   max-height: 50em;
 }
 
+/* Benefits Content */
 #Benefits h3 {
   font-size: var(--font-xl);
   font-weight: 500;
@@ -708,6 +733,7 @@ input[name="panel"]:checked ~ .accordion__content {
   }
 }
 
+/* Steps Content */
 .step__number {
   font-size: var(--font-xl);
   font-family: var(--font-gotham-book);
@@ -756,27 +782,6 @@ input[name="panel"]:checked ~ .accordion__content {
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
   }
-}
-
-.btn__checkout {
-  display: block;
-  background-color: var(--text-grey);
-  color: var(--text-invert);
-  font-size: var(--font-lg);
-  font-family: var(--font-gotham-bold);
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 2rem;
-  padding: 1rem 2rem;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.btn__checkout:hover {
-  background-color: var(--color-accent-light);
-  color: var(--text-primary);
 }
 
 /* Hero Slider */
