@@ -959,6 +959,13 @@ input[name="panel"]:checked ~ .accordion__content {
   background-color: var(--color-accent);
 }
 
+.footer-list {
+  color: var(--color-accent-light);
+}
+.footer-list li {
+  color: var(--color-accent);
+}
+
 [data-form-1="1"] {
   grid-area: form-1-1;
 }
@@ -970,6 +977,7 @@ input[name="panel"]:checked ~ .accordion__content {
 }
 [data-form-1="4"] {
   grid-area: form-1-4;
+  color: var(--color-accent);
 }
 
 [data-form-2="1"] {
