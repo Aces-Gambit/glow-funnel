@@ -931,6 +931,7 @@ input[name="panel"]:checked ~ .accordion__content {
   padding-block: 2rem;
   padding-inline: 0.5rem;
   border-radius: 50%;
+  text-rendering: auto;
 }
 
 /* Before & After */
