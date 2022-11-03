@@ -957,6 +957,9 @@ input[name="panel"]:checked ~ .accordion__content {
   border-radius: 50%;
   background-color: var(--color-accent);
 }
+.footer-icon-wrapper:hover {
+  background-color: var(--color-accent-gold);
+}
 
 .footer-list {
   color: var(--color-accent-light);
