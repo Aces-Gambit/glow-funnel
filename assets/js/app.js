@@ -78,6 +78,10 @@ const swiperHero = new Swiper(".swiper__hero", {
   zoom: {
     maxRatio: 1.5,
   },
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
 });
 
 //Hero Swiper Zoom
