@@ -7,10 +7,8 @@ const navBar = document.querySelector('[data-type="navBar"]');
 const observer = new IntersectionObserver((entries) => {
   if (entries[0].isIntersecting === true) {
     navBar.classList.remove("active");
-    // mainContent.classList.remove("nav-space");
   } else {
     navBar.classList.add("active");
-    // mainContent.classList.add("nav-space");
   }
 });
 
