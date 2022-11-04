@@ -18,7 +18,7 @@
   --font-assistant: "Assistant", sans-serif;
   --bg-nav: rgba(0, 0, 0, 0.18);
   --bg-footer: #434343;
-  --bg-alt: #f9dbd0;
+  --bg-alt: #f6dbe6;
   --bg-nav-top: #000;
   --bg-grey: #fbfbfb;
   --text-primary: #000;
@@ -28,7 +28,7 @@
   --text-footer: #f9dbd0;
   --accordion-color: rgb(85, 85, 85);
   --color-accent: #d0ae91;
-  --color-accent-light: #fbe6de;
+  --color-accent-light: #ffeff5;
   --color-accent-gold: hsl(28, 34%, 52%);
   --color-accent-orange: #ff7c4d;
   --color-accent-orange-light: #ffece5e0;
@@ -253,7 +253,7 @@ section header {
 }
 
 .bg-block {
-  background-color: rgba(248, 220, 209, 0.7);
+  background-color: var(--color-accent-light);
   width: 100%;
   height: 75vh;
   z-index: -1;
