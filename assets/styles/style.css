@@ -960,6 +960,7 @@ input[name="panel"]:checked ~ .accordion__content {
   padding-block: 2rem;
   padding-inline: 2rem;
   border-radius: 50%;
+  text-rendering: auto;
 }
 .swiper-button-prev::after {
   transform: translateX(-10%);
