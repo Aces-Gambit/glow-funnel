@@ -111,25 +111,24 @@
               class="nav-list flex flex-wrap gap-6 justify-center items-center pb-2 uppercase text-md hidden lg:flex"
             >
               <li class="shrink-0">
-                <a href="#" class="btn-nav-shop">Shop Now</a>
+                <a href="#Checkout" class="btn-nav-shop">Shop Now</a>
               </li>
-              <li><a href="#">Acne Skincare</a></li>
-              <li><a href="#">Anti-Aging Skincare</a></li>
-              <li><a href="#">Bundles & Kits</a></li>
-              <li><a href="#">Customer Reviews</a></li>
-              <li><a href="#">Professional Site</a></li>
+              <li><a href="#Steps">Steps To Glowing Skin</a></li>
+              <li><a href="#Stats">Efficacy Test Results</a></li>
+              <li><a href="#Ingredient">Key Ingredients</a></li>
+              <li><a href="#B&A">Before & Afters</a></li>
             </ul>
           </div>
           <div
             class="nav-right flex gap-2 items-center font-semibold lg:basis-[20%]"
           >
             <button
-              class="uppercase p-2 text-sm font-medium hidden lg:block"
+              class="uppercase p-2 text-sm font-medium hidden"
               data-type="klaviyoFormCall"
             >
               Get 10% off
             </button>
-            <div class="flex">
+            <div class="flex hidden">
               <a
                 href="/accounts/login"
                 class="btn-login flex gap-2 items-center"
@@ -157,23 +156,22 @@
           <i class="fa fa-times -translate-y-[1px]"></i>
           <span class="uppercase">menu</span>
         </button>
+        <a href="#Checkout" class="btn-nav-shop" data-type="menuToggleBtn"
+          >Shop Now</a
+        >
         <ul class="font-fancy pl-4 mb-10">
-          <li><a href="#">Customer Reviews</a></li>
-          <li><a href="#">Rewards FAQ</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Tutorials(How to)</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Partner Application</a></li>
-        </ul>
-        <div class="menu__header text-accent-gold uppercase mb-6">Shop</div>
-        <ul class="font-fancy pl-4 mb-10">
-          <li><a href="#">All products</a></li>
-          <li><a href="#">Acne Skincare</a></li>
-          <li><a href="#">Anti-Aging Skincare</a></li>
-          <li><a href="#">Body Skincare</a></li>
-          <li><a href="#">The Glow Gift Guide</a></li>
-          <li><a href="#">Professional Site</a></li>
+          <li>
+            <a href="#Steps" data-type="menuToggleBtn">Steps To Glowing Skin</a>
+          </li>
+          <li>
+            <a href="#Stats" data-type="menuToggleBtn">Efficacy Test Results</a>
+          </li>
+          <li>
+            <a href="#Ingredient" data-type="menuToggleBtn">Key Ingredients</a>
+          </li>
+          <li>
+            <a href="#B&A">Before & Afters</a>
+          </li>
         </ul>
         <button
           href="#"
@@ -297,7 +295,7 @@
             </div>
             <header class="my-6 lg:text-[50px]">Vitamin C Collection</header>
             <div class="hero__review"></div>
-            <div class="hero__description">
+            <div class="hero__description" id="Checkout">
               <p>
                 Noche's Vitamin C Collection is the complete approach to
                 healthy, glowing skin. It is both paraben-free and cruelty-free.
@@ -1175,8 +1173,9 @@
                       >
                     </li>
                     <li>
-                      <a href="https://www.nocheskincare.com/pages/noche-faqs"
-                        >FAQ</a
+                      <a
+                        href="https://www.nocheskincare.com/pages/terms-of-service"
+                        >Terms of Service</a
                       >
                     </li>
                   </ul>
