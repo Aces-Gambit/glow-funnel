@@ -158,3 +158,24 @@ searchToggleBtn.forEach((btn) => {
     search.classList.toggle("active");
   });
 });
+
+//Klaviyo Form Call Function
+function klaviyoFormCall() {
+  window._klOnsite = window._klOnsite || [];
+  window._klOnsite.push(["openForm", "XMZB4t"]);
+}
+
+//loop through all trigger elements and add a click event
+const klaviyoFormCallBtn = document.querySelectorAll(
+  '[data-type="klaviyoFormCall"]'
+);
+klaviyoFormCallBtn.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    klaviyoFormCall();
+  });
+});
+
+//time delayed function to allow the page to load before the klaviyo form is called
+setTimeout(() => {
+  klaviyoFormCall();
+}, 5000);
