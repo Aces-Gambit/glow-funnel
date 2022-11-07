@@ -646,6 +646,7 @@ section header {
   color: var(--accordion-color);
   font-size: var(--font-md);
   border-radius: 5px;
+  padding-block: 2rem;
 }
 
 input[name="panel"]:checked ~ .accordion__content {
@@ -1048,7 +1049,7 @@ input[name="panel"]:checked ~ .accordion__content {
   margin-bottom: 2rem;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .footer-grid {
     display: grid;
 
@@ -1061,7 +1062,7 @@ input[name="panel"]:checked ~ .accordion__content {
     gap: 0.25rem 7rem;
     margin-bottom: 2rem;
   }
-}
+} */
 
 .footer-grid button {
   background-color: var(--color-accent) !important;
