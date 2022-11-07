@@ -1047,12 +1047,7 @@ input[name="panel"]:checked ~ .accordion__content {
     "form-1-1"
     "form-1-2"
     "form-1-3"
-    "form-1-4"
-    "form-2-1"
-    "form-2-2"
-    "form-2-3"
-    "form-2-4";
-  gap: 1rem;
+    "form-1-4";
   margin-top: 1rem;
   margin-bottom: 2rem;
   max-width: 600px;
