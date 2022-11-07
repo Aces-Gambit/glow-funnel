@@ -365,7 +365,9 @@ section header {
 .text-accent-gold {
   color: var(--color-accent-gold) !important;
 }
-
+.text-accent-orange {
+  color: var(--color-accent-orange) !important;
+}
 /* Font Size */
 .text-xs {
   font-size: var(--font-xs);
