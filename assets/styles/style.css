@@ -472,7 +472,7 @@ section header {
   transition: all 0.3s ease-in-out;
 }
 .btn__checkout:hover {
-  background-color: var(--color-accent-light);
+  background-color: var(--color-accent);
   color: var(--text-primary);
 }
 
